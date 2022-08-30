@@ -1,25 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
-import HomePage from './Homepage';
+import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
   Switch,
   Route  
 } from "react-router-dom"
+import List from './Homepage';
+
 
 
 ReactDOM.render( 
     <React.StrictMode>
     <Router>
+      <Header/>
     <Switch>
       <Route exact path="/"  >
         <App/>
       </Route>
-      <Route path="/home" exact >
-      <HomePage />
+      <Route path="/list" exact >
+      <List />
       </Route>
     </Switch>
   </Router>
