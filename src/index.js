@@ -9,7 +9,8 @@ import {
   Switch,
   Route  
 } from "react-router-dom"
-import List from './Homepage';
+
+import Listinput from './Listinput';
 
 
 
@@ -22,7 +23,7 @@ ReactDOM.render(
         <App/>
       </Route>
       <Route path="/list" exact >
-      <List />
+      <Listinput />
       </Route>
     </Switch>
   </Router>
