@@ -14,6 +14,10 @@ class ContentService extends HpttRequest {
     editContent(id,data){
         return this.put('posts',data,id)
     }
+    getComments(id){
+        return this.getbyId('comments',id);
+    }
+    
 }
 
 export const contentService = new ContentService();

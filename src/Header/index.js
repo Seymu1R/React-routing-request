@@ -12,13 +12,17 @@ function Header() {
   return (
     <Container>
         <Row>
-            <Col md={6} >
+            <Col md={4} >
             <Button variant="success" ><Link to="/">Home</Link></Button>
             
             </Col>
-            <Col md={6} >
+            <Col md={4} >
             
             <Button variant="warning" ><Link to="/list">List</Link></Button>
+            </Col>
+            <Col md={4} >
+            
+            <Button variant="info" ><Link to="/comment">Comments</Link></Button>
             </Col>
         
 

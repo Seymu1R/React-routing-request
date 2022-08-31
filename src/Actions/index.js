@@ -9,6 +9,10 @@ export class HpttRequest {
   async get(endPoint){  
      return await axios.get(`${this.baseUrl}/${endPoint}`)
   }
+  async getbyId(endPoint,id){  
+    return await axios.get(`${this.baseUrl}/${endPoint}/${id}`)
+ }
+
   async post (endPoint,data){
     return await axios.post(`${this.baseUrl}/${endPoint}`,data)
   }  

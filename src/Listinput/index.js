@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col, Card ,Button} from 'react-bootstrap';
-import { contentService } from '../Actions/contents';
 import Addlist from '../Addlist';
 import './index.scss'
 
@@ -21,16 +20,20 @@ function Listinput() {
             title:title
         })
         setId(id+1);
-        setListtodo(addTolist);
+        setListtodo(listtodo);
+
     }
+    
+
     return (
+        
         <Container>
             <Row>
                 <Col md={6} ><input onChange={headerChange} placeholder={'Add Header'} type={'text'} ></input></Col>
                 <Col md={6} ><input onChange={titleChange} placeholder={'Add Title'} type={'text'} ></input></Col>                
             </Row>            
                 <button onClick={addTolist} className={'add-btn'} >Add</button>
-            <Addlist list={listtodo} />                
+            <Addlist list={listtodo} setListtodo={setListtodo} />                
         </Container>
         
     )

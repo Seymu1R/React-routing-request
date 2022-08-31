@@ -11,6 +11,7 @@ import {
 } from "react-router-dom"
 
 import Listinput from './Listinput';
+import Comments from './Comments';
 
 
 
@@ -24,6 +25,9 @@ ReactDOM.render(
       </Route>
       <Route path="/list" exact >
       <Listinput />
+      </Route>
+      <Route path="/comment" exact >
+      <Comments />
       </Route>
     </Switch>
   </Router>

@@ -2,6 +2,7 @@ import './App.scss';
 import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { contentService } from './Actions/contents';
+import { useHistory } from 'react-router-dom';
 
 function App() {
   //UseState
@@ -12,9 +13,18 @@ function App() {
       setUsers(data)
     })
   }, [])
+  //take history
+  const history = useHistory();
+  // method for getPost
+  const getComment=(id)=>{
+
+    history.push("/comment",id) 
+    
+  }    
+    
+  
 
   return (
-
     <Container>
       <Row>
         {users.map(({ id, title, body }) => (
@@ -27,15 +37,12 @@ function App() {
                   {body}
                 </Card.Text>
               </Card.Body>
-              <Button variant="primary">ADD TO LIST</Button>
+              <Button onClick={()=>getComment(id)} id={id} variant="primary">Getcomment</Button>
             </Card>
             </Col>
-
         )
-
         )}
-
-      </Row>
+        </Row>
     </Container>
 
   );
