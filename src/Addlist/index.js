@@ -4,6 +4,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 function Addlist({list,setListtodo}) {
+  //delete adding content
   const deletCard = (idcontent) => {
     const update = list.filter(({ id }) => idcontent !== id);
     setListtodo(update);

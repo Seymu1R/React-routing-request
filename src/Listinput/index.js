@@ -12,7 +12,7 @@ function Listinput() {
     //onChange methods
     const headerChange = React.useCallback((e) => { setHeader(e.target.value) }, [])
     const titleChange = React.useCallback((e) => { setTitle(e.target.value) }, [])
-
+    //addTolist method and push data
     const addTolist=()=>{
          listtodo.push({
             id:id,
@@ -22,8 +22,7 @@ function Listinput() {
         setId(id+1);
         setListtodo(listtodo);
 
-    }
-    
+    }  
 
     return (
         

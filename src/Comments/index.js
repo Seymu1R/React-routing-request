@@ -5,18 +5,16 @@ import { useLocation } from 'react-router-dom';
 import { contentService } from '../Actions/contents';
 
 function Comments() {
+    //take location
     const location = useLocation();
+    //states
     const [comment, setComments] = React.useState({});
-
-
+    //getcomment by id
     React.useEffect(() => {
         contentService.getComments(location.state).then(({ data }) => {
             setComments(data);            
         })
     }, [location.state])
-
-    
-
     return (
         <Container>
             <Row>

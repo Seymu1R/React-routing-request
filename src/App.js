@@ -18,12 +18,9 @@ function App() {
   // method for getPost
   const getComment=(id)=>{
 
-    history.push("/comment",id) 
-    
-  }    
-    
+    history.push("/comment",id);    
+  }
   
-
   return (
     <Container>
       <Row>
